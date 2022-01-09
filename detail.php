@@ -12,9 +12,10 @@ $user = mysqli_fetch_array($result);
 <section class="page-section bg-white" id="portfolio">
   <div class="container">
     <?php
-      if($post['user_id'] == $_SESSION['user_id']){
+    if ($post['user_id'] == $_SESSION['user_id']) {
     ?>
-    <a href="edit.php?id=<?= $post['id'] ?>" class="btn btn-warning">Update</a>
+      <a href="edit.php?id=<?= $post['id'] ?>" class="btn btn-warning">Update</a>
+      <a href="delete.php?id=<?= $post['id'] ?>" class="btn btn-danger">Delete</a>
     <?php } ?>
     <div class="text-center" style="margin-top: auto;">
       <h2 class="section-heading text-uppercase" style="margin-right: 600px;">
@@ -27,7 +28,7 @@ $user = mysqli_fetch_array($result);
         <div class="portfolio-item">
           <a class="portfolio-link" data-bs-toggle="modal" href="detail.php">
             <div class="zoom">
-              <img class="img-fluid" src="asset/<?= $post['gambar'] ?>" alt="..." />
+              <img class="img-fluid" style="border-radius: 20px; " src="asset/<?= $post['gambar'] ?>" alt="..." />
             </div>
           </a>
           <div class="portfolio-caption">
@@ -38,19 +39,17 @@ $user = mysqli_fetch_array($result);
       <div class="col-lg col-sm-6 mb-4">
         <div class="portfolio-item">
           <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">Desain.id</div>
             <div class="portfolio-caption-subheading " style="text-align: justify;">
               <?= $post['deskripsi'] ?>
             </div>
           </div>
-        </div>
 </section>
 
 <!-- projek-->
 <section class="page-section bg-light" id="portfolio">
   <div class="container">
     <div class="text-center">
-      <h2 class="section-heading text-uppercase">Project Lainnya</h2>
+      <h2 class="section-heading text-uppercase" style="padding-top: 30px;">Project Lainnya</h2>
     </div>
     <div class="row">
       <?php

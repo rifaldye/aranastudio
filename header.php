@@ -68,10 +68,10 @@ if (isset($_SESSION['user_id'])) {
           if (isset($_SESSION['username'])) {
           ?>
             <li class="nav-item text-center">
-              <a href="upload.php" class="btn btn-primary nav-link px-4 text-white">Upload</a>
+              <a href="upload.php" class="btn btn-primary nav-link px-4 text-white " style="margin-right: 20px;">Upload</a>
             </li>
-            <li class="nav-item text-center">
-              <a href="logout.php" class="btn btn-danger nav-link px-4 text-white">Logout</a>
+            <li class="nav-item text-center" >
+              <a href="logout.php" class="btn btn-danger nav-link px-4 text-white" style="border-radius: 8px;">Logout</a>
             </li>
           <?php
           } else {
